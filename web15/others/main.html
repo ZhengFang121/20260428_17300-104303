@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background: url(../images/park0301.jpg);
+    }
+
+    .info {
+      color: #f0f;
+      text-align: right;
+    }
+
+    .map {
+      /* 跟 national_park.jpg 尺寸一樣 */
+      width: 452px;
+      height: 631px;
+      margin: auto;
+      /* 為了讓 a連結定位 */
+      position: relative;
+    }
+
+    .a1 {
+      width: 125px;
+      height: 25px;
+      position: absolute;
+      left: 215px;
+      top: 50px;
+      border-radius: 15px;
+      /* 為了要對齊位置，要記得註解掉，不然就穿幫了 */
+      /* background: rgba(0, 0, 0, 0.5); */
+    }
+
+    .a2 {
+      width: 52px;
+      height: 45px;
+      border-radius: 25px;
+      position: absolute;
+      top: 180px;
+      left: 269px;
+      /* 為了要對齊位置，要記得註解掉，不然就穿幫了 */
+      /* background: rgba(0, 0, 0, 0.5); */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 題目沒有說要建立 main.html，但 iframe 會用到，所以五題都要建立 -->
+  <div class="map">
+    <img src="../images/national_park.jpg" alt="">
+    <a class="a1" href="../park/yangmingshan.html"></a>
+    <a class="a2" href="../park/sheipa.html"></a>
+  </div>
+  <div class="info">資料來源：內政部營建署『臺灣的國家公園』網站</div>
+</body>
+
+</html>

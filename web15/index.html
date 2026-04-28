@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>國家公園介紹網</title>
+  <style>
+    #main {
+      width: 1024px;
+      height: 768px;
+      margin: auto;
+    }
+
+    #top {
+      width: 1000px;
+      height: 65px;
+      /* 為了讓 #top 自己本身水平置中 */
+      margin: auto;
+      background: #00f;
+      /* 為了讓 #top 的子元素 (只影響文字圖片) 水平置中 */
+      text-align: center;
+    }
+
+    #left {
+      width: 200px;
+      height: calc(768px - 65px - 20px);
+      float: left;
+      margin-left: 12px;
+      background: #0ff;
+    }
+
+    .menu {
+      width: 100%;
+      text-align: center;
+    }
+
+    .menu img {
+      width: 120px;
+      height: 40px;
+    }
+
+    .menu img:hover {
+      /* 色相轉換 */
+      filter: hue-rotate(120deg);
+    }
+
+    .download {
+      text-align: center;
+    }
+
+    .h-30 {
+      height: 30px;
+    }
+
+    #right {
+      width: calc(1000px - 200px);
+      height: calc(768px - 65px - 20px);
+      float: right;
+      margin-right: 12px;
+    }
+
+    marquee {
+      width: 800px;
+      height: 29px;
+      /* 調整 marquee 的垂直對齊方式，可以消除 marquee 下方的縫隙 */
+      vertical-align: middle;
+    }
+
+    iframe {
+      width: 800px;
+      /* right 的高度扣掉 marquee 的高度 */
+      height: calc(768px - 65px - 20px - 29px);
+    }
+
+    #footer {
+      width: 1000px;
+      height: 20px;
+      margin: auto;
+      /* 清除浮動 */
+      /* 如果不清除，父元素會高度塌陷導致背景消失；且後方的文字會試圖環繞上方的浮動區塊，導致排版錯亂 */
+      clear: both;
+      font-family: "標楷體";
+      font-size: 16px;
+      color: #000;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <div id="top"><a href="./index.html"><img src="./images/park0307.gif"></a></div>
+    <div id="left">
+      <table class="menu">
+        <tr>
+          <td>
+            <a href="./park/yangmingshan.html" target="iframe">
+              <img src="./images/park0302.jpg" alt="陽明山國家公園" title="陽明山國家公園">
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <!-- 為了高度 -->
+          <td class="h-30"></td>
+        </tr>
+        <tr>
+          <td>
+            <a href="./park/sheipa.html" target="iframe">
+              <img src="./images/park0303.jpg" alt="雪霸國家公園" title="雪霸國家公園">
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="h-30"></td>
+        </tr>
+        <tr>
+          <td><img src="./images/park0304.jpg" alt="太魯閣國家公園" title="太魯閣國家公園"></td>
+        </tr>
+        <tr>
+          <td class="h-30"></td>
+        </tr>
+        <tr>
+          <td><img src="./images/park0305.jpg" alt="玉山國家公園" title="玉山國家公園"></td>
+        </tr>
+      </table>
+      <!-- 加上 download 屬性才會下載 -->
+      <p class="download"><a href="./others/park.mp3" download="">檔案下載</a></p>
+    </div>
+    <div id="right">
+      <marquee>歡迎進入國家公園介紹網，本網站有詳細的國家公園介紹哦！</marquee>
+      <iframe src="./others/main.html" frameborder="0" name="iframe"></iframe>
+    </div>
+    <div id="footer">網頁設計及維護：15黃正芳、最近更新日期：2026/05/26</div>
+  </div>
+</body>
+
+</html>
